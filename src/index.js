@@ -66,6 +66,7 @@ let clearFields = () => {
   cuisineType = $("#cuisineType").val("american");
   mealType = $("#mealType").val("breakfast");
   $(".showErrors").text("");
+  $("input:checkbox[type='checkbox']:checked").prop('checked', false);
 };
 
 $(document).ready(function () {
