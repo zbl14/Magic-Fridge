@@ -26,7 +26,7 @@ function getElements(response) {
     } else {
       for (let i = 0; i < response.hits.length; i++) {
         $(".showRecipes").append(`
-        <div class="card border-info mb-3"" style="width: 20rem;">
+        <div class="card border-info mb-3" ">
           <img src="${
             response.hits[i].recipe.images.REGULAR.url
           }" class="card-img-top" alt="a photo of meal">
