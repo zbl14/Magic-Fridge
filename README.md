@@ -74,4 +74,4 @@ $ npm run start
 - Zhibin Liang <ifthereisoneday@gmail.com>
 - Joseph Jack <joseph.w.jack@gmail.com>
 
-Copyright (c) _7/2022_
+Copyright &copy; _7/2022_
