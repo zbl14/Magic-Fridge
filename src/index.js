@@ -26,27 +26,16 @@ function getElements(response) {
     } else {
       for (let i = 0; i < response.hits.length; i++) {
         $(".showRecipes").append(`
-        <div class="card border-info mb-3" ">
-          <img src="${
-            response.hits[i].recipe.images.REGULAR.url
-          }" class="card-img-top" alt="a photo of meal">
+        <div class="card border-info mb-3">
+          <img src="${response.hits[i].recipe.images.REGULAR.url}" 
+          class="card-img-top" alt="a photo of meal">
           <div class="card-body">
             <h5 class="card-title">${response.hits[i].recipe.label}</h5>
-            <p class="card-text">Total time: ${
-              response.hits[i].recipe.totalTime
-            } mins</p>
-            <p class="card-text">Total calories: ${parseFloat(
-              response.hits[i].recipe.calories
-            ).toFixed(2)}</p>
-            <p class="card-text">Total Fat: ${parseInt(
-              response.hits[i].recipe.totalNutrients.FAT.quantity
-            )}${response.hits[i].recipe.totalNutrients.FAT.unit}</p>
-            <p class="card-text">Total Carbs: ${parseInt(
-              response.hits[i].recipe.totalNutrients.CHOCDF.quantity
-            )}${response.hits[i].recipe.totalNutrients.CHOCDF.unit}</p>
-            <p class="card-text">Total Protein: ${parseInt(
-              response.hits[i].recipe.totalNutrients.PROCNT.quantity
-            )}${response.hits[i].recipe.totalNutrients.PROCNT.unit}</p>
+            <p class="card-text">Total time: ${response.hits[i].recipe.totalTime} mins</p>
+            <p class="card-text">Total calories: ${parseFloat(response.hits[i].recipe.calories).toFixed(2)}</p>
+            <p class="card-text">Total Fat: ${parseInt(response.hits[i].recipe.totalNutrients.FAT.quantity)}${response.hits[i].recipe.totalNutrients.FAT.unit}</p>
+            <p class="card-text">Total Carbs: ${parseInt(response.hits[i].recipe.totalNutrients.CHOCDF.quantity)}${response.hits[i].recipe.totalNutrients.CHOCDF.unit}</p>
+            <p class="card-text">Total Protein: ${parseInt(response.hits[i].recipe.totalNutrients.PROCNT.quantity)}${response.hits[i].recipe.totalNutrients.PROCNT.unit}</p>
             <div class="ingredientListTitle">
               <p>Ingredient List</p>
               <div id="showIngredient${i}" class="ingredientList"> 
