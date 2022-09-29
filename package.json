@@ -7,7 +7,8 @@
     "build": "webpack --mode development",
     "start": "npm run build && webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "deploy": "npm run build && gh-pages -d dist --repo https://github.com/zbl14/Magic-Fridge.git"
   },
   "jest": {
     "collectCoverage": true,
@@ -26,6 +27,7 @@
     "dotenv-webpack": "^2.0.0",
     "eslint": "^6.3.0",
     "eslint-loader": "^3.0.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
     "style-loader": "^1.0.0",
